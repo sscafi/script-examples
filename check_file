@@ -1,4 +1,12 @@
 #!/bin/sh
+# File Existence Check and Listing
+
+# This script checks if a file exists and, if so, lists its details using 'ls -l'.
+# If the file does not exist, it prints an error message and exits with a non-zero status.
+
+# 🛠️ Usage:
+# Make sure the script has executable permissions. Run it using ./script_name.sh <file_path>
+
 if test ! -e $1
 then
    echo "$1 does not exist."
