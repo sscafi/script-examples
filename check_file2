@@ -1,9 +1,19 @@
 #!/bin/sh
+# File Existence Check and Listing with Argument Validation
+
+# This script checks if a file exists and, if so, lists its details using 'ls -l'.
+# It also validates the input arguments to ensure that a file name is provided.
+# If no arguments are provided or if the specified file does not exist, appropriate error messages are displayed.
+
+# 🛠️ Usage:
+# Make sure the script has executable permissions. Run it using ./script_name.sh <file_name>
+
 if test $# -eq 0
 then
    echo Usage: check_file file_name
    exit 2
 fi
+
 if test ! -e $1
 then
    echo "$1 does not exist."
