@@ -1,5 +1,13 @@
 #!/bin/sh
 # Check if a file is executable.
+
+# This script checks if a specified file is executable.
+# It uses the 'test' command to test if the file has executable permissions (-x).
+# Depending on the result, it prints whether the file is executable or not.
+
+# 🛠️ Usage:
+# Make sure the script has executable permissions. Run it using ./script_name.sh <file_name>
+
 # First version
 if test -x $1
 then
