@@ -1,4 +1,12 @@
 #!/bin/sh
+# Log Users Script
+
+# This script logs users who are currently logged on to the system.
+# It defines a function 'log' that appends logged-in user information along with timestamp to a specified log file.
+# The main script portion calls the 'log' function multiple times with different log file names.
+
+# 🛠️ Usage:
+# Make sure the script has executable permissions. Run it using ./script_name.sh
 
 # Function to log users
 log()
@@ -9,5 +17,7 @@ log()
 }
 
 # Beginning of main script
+
+# Logging users to two different log files
 log log1
 log log2
