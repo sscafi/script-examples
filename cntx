@@ -1,14 +1,23 @@
 #!/bin/sh
-# Count the number of executable files in
-# the current working directory
+# Count the number of executable files in the current working directory
+
+# This script counts the number of executable files in the current working directory.
+# It iterates through each file in the directory using a 'for' loop.
+# For each file, it checks if the file is executable using the 'test' command with the '-x' option.
+# If the file is executable, it increments the count and lists details of the file using 'ls -l'.
+# Finally, it prints the total number of executable files found.
+
+# 🛠️ Usage:
+# Make sure the script has executable permissions. Run it using ./script_name.sh
+
 count=0
 for i in *
 do
    if test -x $i
    then
-      count=`expr $count  + 1`
+      count=`expr $count + 1`
       ls -l $i
    fi
 done
-echo "There are $count executable files."
 
+echo "There are $count executable files."
